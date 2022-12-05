@@ -15,7 +15,7 @@ My personal website (https://mahasamut.xyz)
 
 ## Condition:
 
--   Add a link to my [Github](https://github.com/M4h45amu7x) / [Repositories](https://github.com/M4h45amu7x/Mahasamut.xyz-Redesign) / [Website](https://mahasamut.xyz)
+-   Add a link to my [Github](https://github.com/M4h45amu7x) / [Repository](https://github.com/M4h45amu7x/Mahasamut.xyz-Redesign) / [Website](https://mahasamut.xyz)
 -   Don't use any of my images or pictures excluding icons and background
 
 ## License:
