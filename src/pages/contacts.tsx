@@ -23,7 +23,7 @@ const Service: NextPage = () => {
                         </li>
                         <li>
                             <ButtonLink href="https://github.com/M4h45amu7x">
-                                <FaFacebookSquare className="inline" /> @M4h45amu7x
+                                <FaGithubSquare className="inline" /> @M4h45amu7x
                             </ButtonLink>
                         </li>
                     </ul>
