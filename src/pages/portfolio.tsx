@@ -16,6 +16,8 @@ import Section from 'components/layout/Section'
 import { IGitHubRepo } from 'interfaces/GitHubRepo'
 import IWork from 'interfaces/Work'
 
+import tw from 'twin.macro'
+
 const workLists: IWork[] = [
     {
         image: '1.png',
@@ -76,7 +78,7 @@ const Service: NextPage = () => {
             <Section>
                 <Section.Title>Work</Section.Title>
                 <Section.Body noIndent>
-                    <div className="grid grid-cols-1 gap-5 mt-4">
+                    <div tw="mt-4 grid grid-cols-1 gap-5">
                         {workLists.map((row, index) => {
                             return <WorkCard data={row} key={index} />
                         })}
@@ -87,7 +89,7 @@ const Service: NextPage = () => {
                 <Section.Title>Open-Source projects</Section.Title>
                 <Section.Body noIndent>
                     <Swiper
-                        className="mt-4"
+                        tw="mt-4"
                         modules={[Pagination, Autoplay, Mousewheel]}
                         spaceBetween={16}
                         slidesPerView={1}

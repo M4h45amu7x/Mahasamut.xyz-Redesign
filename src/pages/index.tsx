@@ -6,6 +6,8 @@ import { NextSeo } from 'next-seo'
 
 import Section from 'components/layout/Section'
 
+import tw from 'twin.macro'
+
 interface ISkills {
     name: string
     list: string[]
@@ -46,10 +48,10 @@ const Home: NextPage = () => {
                     <Section key={index}>
                         <Section.Title>{row.name}</Section.Title>
                         <Section.Body noIndent>
-                            <div className="grid grid-cols-3 gap-3 mt-2">
+                            <div tw="mt-2 grid grid-cols-3 gap-3">
                                 {row.list.map((row2, index) => {
                                     return (
-                                        <div className="flex items-center gap-2" key={index}>
+                                        <div tw="flex items-center gap-2" key={index}>
                                             <NextImage
                                                 width={32}
                                                 height={32}
@@ -57,7 +59,7 @@ const Home: NextPage = () => {
                                                     .replaceAll(' ', '')
                                                     .toLocaleLowerCase()}.png`}
                                                 alt={row2}
-                                                className="w-[32px] h-[32px]"
+                                                tw="w-[32px] h-[32px]"
                                                 quality={100}
                                             />
                                             <p>{row2}</p>

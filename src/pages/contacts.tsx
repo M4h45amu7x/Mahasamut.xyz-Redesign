@@ -7,6 +7,8 @@ import { NextSeo } from 'next-seo'
 import ButtonLink from 'components/ButtonLink'
 import Section from 'components/layout/Section'
 
+import tw from 'twin.macro'
+
 const Service: NextPage = () => {
     return (
         <>
@@ -18,12 +20,12 @@ const Service: NextPage = () => {
                     <ul>
                         <li>
                             <ButtonLink href="https://facebook.com/M4h45amu7x">
-                                <FaFacebookSquare className="inline" /> @M4h45amu7x
+                                <FaFacebookSquare tw="inline align-middle" /> @M4h45amu7x
                             </ButtonLink>
                         </li>
                         <li>
                             <ButtonLink href="https://github.com/M4h45amu7x">
-                                <FaGithubSquare className="inline" /> @M4h45amu7x
+                                <FaGithubSquare tw="inline align-middle" /> @M4h45amu7x
                             </ButtonLink>
                         </li>
                     </ul>

@@ -1,6 +1,7 @@
 /** @type {import('prettier').Config} */
 
 module.exports = {
+    // plugins: [require('prettier-plugin-twin.macro')],
     arrowParens: 'always',
     trailingComma: 'all',
     tabWidth: 4,
@@ -18,6 +19,7 @@ module.exports = {
         '^components/(.*)$',
         '^interfaces/(.*)$',
         '^styles/(.*)$',
+        '^twin.macro$',
     ],
     importOrderSeparation: true,
     importOrderSortSpecifiers: true,

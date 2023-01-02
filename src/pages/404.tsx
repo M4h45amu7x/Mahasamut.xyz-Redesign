@@ -4,6 +4,8 @@ import { NextSeo } from 'next-seo'
 
 import Section from 'components/layout/Section'
 
+import tw from 'twin.macro'
+
 const _404: NextPage = () => {
     return (
         <>

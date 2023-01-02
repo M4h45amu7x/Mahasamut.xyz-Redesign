@@ -2,6 +2,8 @@ import { ReactNode } from 'react'
 
 import { motion } from 'framer-motion'
 
+import tw from 'twin.macro'
+
 interface IProps {
     children?: ReactNode
 }
@@ -30,16 +32,17 @@ const Section = ({ children }: IProps) => {
 
 const Title = ({ children }: IProps) => {
     return (
-        <p className="font-bold text-xl capitalize border-b-4 border-sky-50 inline-block align-middle drop-shadow-lg">
+        <p tw="inline-block border-sky-50 border-b-4 align-middle font-bold text-xl capitalize drop-shadow-lg">
             {children}
         </p>
     )
 }
 
 const Body = ({ children, noIndent = false }: IBodyProps) => {
-    return <div className={`mt-1 ${!noIndent && 'indent-sm'}`}>{children}</div>
+    return <div css={[tw`mt-1`, !noIndent && tw`indent-4`]}>{children}</div>
 }
 
 Section.Title = Title
 Section.Body = Body
+
 export default Section

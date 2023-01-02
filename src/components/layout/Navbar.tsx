@@ -1,6 +1,8 @@
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 
+import tw from 'twin.macro'
+
 interface INavbar {
     title: string
     href: string
@@ -25,16 +27,17 @@ const Navbar = () => {
     const router = useRouter()
 
     return (
-        <header className="grid grid-flow-col my-6">
+        <header tw="my-6 grid grid-flow-col">
             {navbarLists.map((row, index) => {
                 return (
                     <NextLink href={row.href} key={index} legacyBehavior>
                         <div
-                            className={`cursor-pointer text-lg text-center border-b-2 transition-colors ${
+                            css={[
+                                tw`cursor-pointer border-b-2 pb-2 text-center text-lg transition-colors`,
                                 router.pathname === row.href
-                                    ? 'border-sky-500 text-sky-500'
-                                    : 'border-sky-50 hover:border-gray-400 hover:text-gray-400'
-                            } pb-2`}
+                                    ? tw`border-sky-500 text-sky-500`
+                                    : tw`border-sky-50 hover:(border-gray-400 text-gray-400)`,
+                            ]}
                         >
                             <p>{row.title}</p>
                         </div>

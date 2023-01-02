@@ -7,13 +7,15 @@ import NextImage from 'next/image'
 
 import { DefaultSeo } from 'next-seo'
 
-import 'windi.css'
-import colors from 'windicss/colors'
+import colors from 'tailwindcss/colors'
 
 import Footer from 'components/layout/Footer'
 import Navbar from 'components/layout/Navbar'
 
 import 'styles/globals.css'
+
+import tw from 'twin.macro'
+import { GlobalStyles } from 'twin.macro'
 
 function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
@@ -25,6 +27,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <>
+            <GlobalStyles />
+
             <DefaultSeo
                 titleTemplate="%s | M4h45amu7x"
                 description="0x11 year old Developer from Thailand"
@@ -142,11 +146,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                 themeColor={colors.sky[500].toString()}
             />
 
-            <MouseParallaxContainer className="parallax">
+            <MouseParallaxContainer>
                 <MouseParallaxChild
                     factorX={0.01}
                     factorY={0.01}
-                    updateStyles={{
+                    style={{
                         background: 'url(/images/background.jpg)',
                         backgroundAttachment: 'fixed',
                         backgroundSize: 'cover',
@@ -156,7 +160,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                         transform: 'scale(1.2)',
                     }}
                 >
-                    <div className="fixed backdrop-filter backdrop-blur-sm w-full h-screen bg-black/10" />
+                    <div tw="fixed h-screen w-full bg-black/10 backdrop-blur-sm" />
                     <div className="meteor-1" />
                     <div className="meteor-2" />
                     <div className="meteor-3" />
@@ -176,7 +180,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <MouseParallaxChild
                     factorX={0.04}
                     factorY={0.04}
-                    updateStyles={{
+                    style={{
                         position: 'fixed',
                         left: '0',
                         top: '0',
@@ -184,14 +188,14 @@ function MyApp({ Component, pageProps }: AppProps) {
                         height: '100%',
                     }}
                 >
-                    <div className="flex h-screen justify-center items-center">
-                        <div className="bg-sky-900/70 rounded-lg w-[95%] sm:w-[500px] max-h-[95%] p-5 text-sky-50 shadow-lg shadow-sky-900/50 overflow-y-auto">
+                    <div tw="flex h-screen items-center justify-center">
+                        <div tw="overflow-y-auto rounded-lg bg-sky-900/70 p-5 text-sky-50 shadow-lg shadow-sky-900/50 w-[95%] max-h-[95%] sm:w-[500px]">
                             <NextImage
                                 src="/images/profile.jpg"
                                 alt="Logo"
                                 width={256}
                                 height={256}
-                                className="block mx-auto w-1/2 h-1/2 sm:w-[128px] rounded-full border-solid border-2 border-sky-500"
+                                tw="mx-auto block h-1/2 w-1/2 rounded-full border-2 border-sky-500 border-solid sm:w-[128px]"
                                 quality={100}
                             />
                             <Navbar />
